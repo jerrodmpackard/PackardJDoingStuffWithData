@@ -11,8 +11,36 @@
 <body>
     <div class="container mx-auto px-20 ">
         <h1 class="text-6xl text-center my-5">People Directory</h1>
-        <div class="flex overflow-scroll h-screen">
-            <div id="injectHere" class="mx-auto mt-5"></div>
+        
+        <div class="flex justify-center">
+            <div class="inline-flex rounded-md shadow-sm my-5" role="group">
+                <button type="button" id="sortByIDBtn"
+                    class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+                    Sort by ID
+                </button>
+                <button type="button" id="sortByFirstNameBtn"
+                    class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+                    Sort by First Name
+                </button>
+                <button type="button" id="sortByLastNameBtn"
+                    class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+                    Sort by Last Name
+                </button>
+                <button type="button" id="sortByHeightBtn"
+                    class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+                    Sort by Height
+                </button>
+                <button type="button" id="sortByAgeBtn"
+                    class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+                    Sort by Age
+                </button>
+            </div>
+        </div>
+        
+
+
+        <div class="flex overflow-scroll h-screen w-full">
+            <div id="injectHere" class="mx-auto mt-5 w-full"></div>
 
         </div>
     </div>
