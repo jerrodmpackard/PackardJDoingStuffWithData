@@ -174,7 +174,7 @@ sortByIDBtn.addEventListener('click', async () => {
 sortByFirstNameBtn.addEventListener('click', async () => {
     const people = await getData();
 
-    people.sort(function(a, b) {
+    people.sort((a, b) => {
         if(a.FirstName < b.FirstName) {
             return -1;
         } 
@@ -260,7 +260,7 @@ sortByFirstNameBtn.addEventListener('click', async () => {
 sortByLastNameBtn.addEventListener('click', async () => {
     const people = await getData();
 
-    people.sort(function(a, b) {
+    people.sort((a, b) => {
         if(a.LastName < b.LastName) {
             return -1;
         } 
@@ -346,7 +346,7 @@ sortByLastNameBtn.addEventListener('click', async () => {
 sortByHeightBtn.addEventListener('click', async () => {
     const people = await getData();
 
-    people.sort(function(a, b) {
+    people.sort((a, b) => {
         if(a.Height < b.Height) {
             return -1;
         } 
@@ -432,7 +432,7 @@ sortByHeightBtn.addEventListener('click', async () => {
 sortByAgeBtn.addEventListener('click', async () => {
     const people = await getData();
 
-    people.sort(function(a, b) {
+    people.sort((a, b) => {
         if(a.Age < b.Age) {
             return -1;
         } 
