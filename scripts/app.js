@@ -88,15 +88,43 @@ const displayNames = async () => {
         row.append(personEmail);
         row.append(personHeight);
         row.append(personAge);
-        
+
     });
 
 }
 
 displayNames();
 
+let sortedByID = true;
+
 sortByIDBtn.addEventListener('click', async () => {
     let people = await getData();
+
+    if (sortedByID) {
+        people.sort((a, b) => {
+            if (a.Id < b.Id) {
+                return -1;
+            }
+            if (a.Id > b.Id) {
+                return 1;
+            }
+            return 0;
+        });
+
+        sortedByID = false;
+    } else {
+        people.sort((a, b) => {
+            if (a.Id < b.Id) {
+                return 1;
+            }
+            if (a.Id > b.Id) {
+                return -1;
+            }
+            return 0;
+        });
+
+        sortedByID = true;
+    }
 
     injectHere.textContent = '';
 
@@ -170,19 +198,37 @@ sortByIDBtn.addEventListener('click', async () => {
     });
 
 });
+
+let sortedByFirstName = true;
 
 sortByFirstNameBtn.addEventListener('click', async () => {
     const people = await getData();
 
-    people.sort((a, b) => {
-        if(a.FirstName < b.FirstName) {
-            return -1;
-        } 
-        if(a.FirstName > b.FirstName) {
-            return 1;
-        }
-        return 0;
-    });
+    if (sortedByFirstName) {
+        people.sort((a, b) => {
+            if (a.FirstName < b.FirstName) {
+                return -1;
+            }
+            if (a.FirstName > b.FirstName) {
+                return 1;
+            }
+            return 0;
+        });
+
+        sortedByFirstName = false;
+    } else {
+        people.sort((a, b) => {
+            if (a.FirstName < b.FirstName) {
+                return 1;
+            }
+            if (a.FirstName > b.FirstName) {
+                return -1;
+            }
+            return 0;
+        });
+
+        sortedByFirstName = true;
+    }
 
     injectHere.textContent = '';
 
@@ -256,19 +302,37 @@ sortByFirstNameBtn.addEventListener('click', async () => {
     });
 
 });
+
+let sortedByLastName = true;
 
 sortByLastNameBtn.addEventListener('click', async () => {
     const people = await getData();
 
-    people.sort((a, b) => {
-        if(a.LastName < b.LastName) {
-            return -1;
-        } 
-        if(a.LastName > b.LastName) {
-            return 1;
-        }
-        return 0;
-    });
+    if (sortedByLastName) {
+        people.sort((a, b) => {
+            if (a.LastName < b.LastName) {
+                return -1;
+            }
+            if (a.LastName > b.LastName) {
+                return 1;
+            }
+            return 0;
+        });
+
+        sortedByLastName = false;
+    } else {
+        people.sort((a, b) => {
+            if (a.LastName < b.LastName) {
+                return 1;
+            }
+            if (a.LastName > b.LastName) {
+                return -1;
+            }
+            return 0;
+        });
+
+        sortedByLastName = true;
+    }
 
     injectHere.textContent = '';
 
@@ -342,19 +406,37 @@ sortByLastNameBtn.addEventListener('click', async () => {
     });
 
 });
+
+let sortedByHeight = true;
 
 sortByHeightBtn.addEventListener('click', async () => {
     const people = await getData();
 
-    people.sort((a, b) => {
-        if(a.Height < b.Height) {
-            return -1;
-        } 
-        if(a.Height > b.Height) {
-            return 1;
-        }
-        return 0;
-    });
+    if (sortedByHeight) {
+        people.sort((a, b) => {
+            if (a.Height < b.Height) {
+                return -1;
+            }
+            if (a.Height > b.Height) {
+                return 1;
+            }
+            return 0;
+        });
+
+        sortedByHeight = false;
+    } else {
+        people.sort((a, b) => {
+            if (a.Height < b.Height) {
+                return 1;
+            }
+            if (a.Height > b.Height) {
+                return -1;
+            }
+            return 0;
+        });
+
+        sortedByHeight = true;
+    }
 
     injectHere.textContent = '';
 
@@ -429,18 +511,36 @@ sortByHeightBtn.addEventListener('click', async () => {
 
 });
 
+let sortedByAge = true;
+
 sortByAgeBtn.addEventListener('click', async () => {
     const people = await getData();
 
-    people.sort((a, b) => {
-        if(a.Age < b.Age) {
-            return -1;
-        } 
-        if(a.Age > b.Age) {
-            return 1;
-        }
-        return 0;
-    });
+    if (sortedByAge) {
+        people.sort((a, b) => {
+            if (a.Age < b.Age) {
+                return -1;
+            }
+            if (a.Age > b.Age) {
+                return 1;
+            }
+            return 0;
+        });
+
+        sortedByAge = false;
+    } else {
+        people.sort((a, b) => {
+            if (a.Age < b.Age) {
+                return 1;
+            }
+            if (a.Age > b.Age) {
+                return -1;
+            }
+            return 0;
+        });
+
+        sortedByAge = true;
+    }
 
     injectHere.textContent = '';
 
