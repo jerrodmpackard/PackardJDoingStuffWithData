@@ -4,6 +4,11 @@ let sortByFirstNameBtn = document.getElementById('sortByFirstNameBtn');
 let sortByLastNameBtn = document.getElementById('sortByLastNameBtn');
 let sortByHeightBtn = document.getElementById('sortByHeightBtn');
 let sortByAgeBtn = document.getElementById('sortByAgeBtn');
+let tenResults = document.getElementById('tenResults');
+let twentyResults = document.getElementById('twentyResults');
+let thirtyResults = document.getElementById('thirtyResults');
+let fortyResults = document.getElementById('fortyResults');
+let fiftyResults = document.getElementById('fiftyResults');
 
 
 const getData = async () => {
